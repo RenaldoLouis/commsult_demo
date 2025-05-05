@@ -11,7 +11,11 @@ const authHandler = NextAuth({
             },
             async authorize(credentials) {
                 try {
-                    return null
+                    const { email, password } = credentials;
+
+                    if (email === "demo@example.com" && password === "password") {
+                        return { id: 1, name: "Demo User", email: "demo@example.com" };
+                    }
                 }
                 catch (e) {
                     throw new Error(e);
@@ -19,7 +23,18 @@ const authHandler = NextAuth({
             }
         })
     ],
-    secret: "asd",
+    pages: {
+        signIn: "/login"
+    },
+    session: {
+        strategy: "jwt",
+        maxAge: 5,
+        updateAge: 0,
+    },
+    jwt: {
+        maxAge: 300,
+    },
+    secret: process.env.NEXTAUTH_SECRET,
 })
 
 export { authHandler as GET, authHandler as POST };

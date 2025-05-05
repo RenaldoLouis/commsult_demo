@@ -58,6 +58,7 @@ const LoginForm = () => {
             <button
                 type="submit"
                 className="border rounded-lg px-6 py-2 bg-gray-100 hover:bg-gray-200 duration-300 uppercase text-sm"
+                style={{ color: "black" }}
             >
                 Log in
             </button>
