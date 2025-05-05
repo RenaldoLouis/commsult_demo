@@ -39,34 +39,36 @@ const LoginForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col space-y-12 w-full px-32"
+            className="flex flex-col space-y-6 w-full max-w-md bg-white p-8 rounded-lg shadow-lg"
         >
+            <h1 className="text-2xl font-bold text-center text-black">Login</h1>
+
             <input
                 type="text"
                 value={email}
                 onChange={handleEmailChange}
-                placeholder="Enter your email address"
-                className="border-b border-b-gray-200 hover:border-b-gray-500"
+                placeholder="Email address"
+                className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+
             <input
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
-                placeholder="Enter your password"
-                className="border-b border-b-gray-200 hover:border-b-gray-500"
+                placeholder="Password"
+                className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+
             <button
                 type="submit"
-                className="border rounded-lg px-6 py-2 bg-gray-100 hover:bg-gray-200 duration-300 uppercase text-sm"
-                style={{ color: "black" }}
+                className="bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition-colors text-lg font-semibold"
             >
-                Log in
+                Log In
             </button>
-            {error &&
-                <p className="text-red-500 font-bold text-center">
-                    {error}
-                </p>
-            }
+
+            {error && (
+                <p className="text-red-600 font-medium text-center">{error}</p>
+            )}
         </form>
     )
 }
