@@ -33,7 +33,7 @@ const LoginForm = () => {
                 onSubmit={handleSubmit}
                 className="bg-white p-6 rounded-md shadow w-full max-w-sm space-y-4"
             >
-                <h1 className="text-black text-xl font-semibold text-center">Login</h1>
+                <h1 className="text-black text-xl font-semibold text-center">Loginiiiiii</h1>
 
                 <input
                     type="text"
