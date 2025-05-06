@@ -4,15 +4,15 @@ import LoginForm from '../LoginForm';
 
 test('render login form', () => {
     render(<LoginForm />);
-    expect(screen.getByText('Log in')).toBeInTheDocument();
+    expect(screen.getByText('Log In')).toBeInTheDocument();
 });
 
 test('updates input values on change', () => {
     render(<LoginForm />);
-    fireEvent.change(screen.getByPlaceholderText('Enter your email address'), {
+    fireEvent.change(screen.getByPlaceholderText('Email address'), {
         target: { value: 'test@example.com' },
     });
-    fireEvent.change(screen.getByPlaceholderText('Enter your password'), {
+    fireEvent.change(screen.getByPlaceholderText('Password'), {
         target: { value: 'secret' },
     });
 
