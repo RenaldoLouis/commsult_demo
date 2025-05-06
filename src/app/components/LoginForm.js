@@ -48,7 +48,7 @@ const LoginForm = () => {
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email address"
-                className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="text-black p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <input
@@ -56,7 +56,7 @@ const LoginForm = () => {
                 value={password}
                 onChange={handlePasswordChange}
                 placeholder="Password"
-                className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="text-black p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <button
